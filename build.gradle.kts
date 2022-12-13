@@ -17,3 +17,8 @@ tasks {
         gradleVersion = "7.6"
     }
 }
+
+tasks.register("runDay1", JavaExec::class) {
+    mainClass.set("Day1Kt")
+    classpath = sourceSets["main"].runtimeClasspath
+}
