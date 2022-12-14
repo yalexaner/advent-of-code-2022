@@ -10,7 +10,7 @@ fun main() {
     println(part2(input))
 }
 
-fun runTests() {
+private fun runTests() {
     val testInput = readInput("Day01_test")
     val part1Result = part1(testInput)
     check(part1Result == 24000) { "part1 is $part1Result, but expected 24000" }
@@ -18,7 +18,7 @@ fun runTests() {
     check(part2Result == 45000) { "part2 is $part2Result, but exprected 45000"}
 }
 
-fun part1(input: List<String>): Int {
+private fun part1(input: List<String>): Int {
     var maxCalories = 0
     var currentElfCalories = 0
 
@@ -39,7 +39,7 @@ fun part1(input: List<String>): Int {
     return maxCalories
 }
 
-fun part2(input: List<String>): Int {
+private fun part2(input: List<String>): Int {
     val topElvesCalories = Array(3) { 0 }
     var currentElfCalories = 0
 
@@ -60,7 +60,7 @@ fun part2(input: List<String>): Int {
     return topElvesCalories.sum()
 }
 
-fun Array<Int>.addOrReplaceIfPossible(num: Int) {
+private fun Array<Int>.addOrReplaceIfPossible(num: Int) {
     var currentMin = num
     var currentIdx = 0
     while (currentIdx < size) {
