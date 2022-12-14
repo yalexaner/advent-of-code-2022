@@ -22,3 +22,8 @@ tasks.register("runDay1", JavaExec::class) {
     mainClass.set("Day1Kt")
     classpath = sourceSets["main"].runtimeClasspath
 }
+
+tasks.register("runDay2", JavaExec::class) {
+    mainClass.set("Day2Kt")
+    classpath = sourceSets["main"].runtimeClasspath
+}
